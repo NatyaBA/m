@@ -7,8 +7,30 @@
     transform: translate(-50%, -50%)
 
 }
+.gratitude{
+    display: none;
+}
 
-.text {
+input, textarea {
+    width: 100%;
+    padding: 16px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #f1f1f1;
+}
+
+p input  {
+    width:60%;
+    padding: 6px 7.5px;    
+    background-color: rgb(33, 83, 177);  
+    color: aliceblue;
+}
+
+p {
+    display: flex;
+}
+
+.text, .text_button {
     margin-left: 30px; 
     font: 30px 'Comic Sans MS', sans-serif;
 }
@@ -21,12 +43,12 @@
 
 .message {  
     margin-left: 30px; 
-    height: 150px;
-    width: 225px;
+    height: 195px;
+    width: 292.5px;
 }
 
 textarea {
-    resize: none;
+    resize: none;   
 }
 
 @media (max-width: 1160px) {
@@ -40,10 +62,9 @@ textarea {
         margin-top: 15px;
     }
     
-    .massage {  
-        margin-left: 30px; 
-        height: 150px;
-        width: 225px;
+    .message {  
+        height: 165px;
+        width: 247.5px;
     }
     .table {
         display: flex;
@@ -56,12 +77,21 @@ textarea {
         font: 15px 'Comic Sans MS', sans-serif;
     }
     
+    .text_button {
+        font: 10px 'Comic Sans MS', sans-serif;
+    }
+    
+    .text {
+        margin-left: 0px; 
+    }
+
     .table {
         display: block;
     }
 
-    .massage {   
-        height: 100px;
-        width: 150px;
+    .message {   
+        margin-left: 0px;
+        height: 150px;
+        width: 215px;
     }
 }

@@ -27,38 +27,38 @@
                 </div>
             </div>
         </div>
-    
+   
         <div class="main">
-            <form class="table" name="form1" method="post" action="" onSubmit="return testCont();" onReset="return confirmReset();">
-                <div >
+            <form class="table" id="form_id" method="post" action="" onsubmit="javascript:return validate('form_id','email');" >
+                <div>
                     <table border="0">
                         <tr>
                             <td scope="col" class="text">Name*</td>
                         </tr>
                         <tr>
-                            <td scope="col"><input type="text" name="FIO"></td>
+                            <td scope="col"><input type="text" pattern="^[a-zA-Z]+$" name="FIO" required oninvalid="setCustomValidity('Enter your name')" oninput="setCustomValidity('')"></td>
                         </tr>
                         <tr>
                             <td class="text">E-mail*</td>
                         </tr>
                         <tr>
-                            <td><input type="text" name="EMail"></td>
+                            <td><input type="text" id="email" name="email" required oninvalid="setCustomValidity('Enter E-mail')" oninput="setCustomValidity('')"></td>
                         </tr>
                         <tr>
                             <td class="text">Website</td>
                         </tr>    
                         <tr>
-                            <td><input type="text"></td>
+                            <td><input type="text" pattern="^[a-zA-Z]+$"></td>
                         </tr>
                     </table>
                     <p>
-                        <input class="text_button" type="submit" value="Отправить">
-                        <input class="text_button" type="reset" value="Очистить">
+                        <input class="text_button" onclick='foo();' type="submit" value="Send">
+                        <input class="text_button" type="reset" value="Clear">
                     </p>
                 </div>
                 <div>
                     <div class="text">Message:*</div>
-                    <textarea class="message" required></textarea>
+                    <textarea class="message" required oninvalid="setCustomValidity('Enter message')" oninput="setCustomValidity('')"></textarea>
                 </div>
             </form>
         </div>

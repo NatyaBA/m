@@ -1,20 +1,16 @@
-function testCont() {
-    if (form1.FIO.value == "") {
-        form1.FIO.select();
-        alert ("Введите Имя");
-        return false;
-    }
 
-    if (form1.EMail.value == "") {
-        form1.EMail.select();
-        alert ("Введите E-mail");
-        return false;
+function validate(form_id,email) {
+    var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+    var address = document.forms[form_id].elements[email].value;
+   
+    if(reg.test(address) == false) {
+         alert('Введите корректный e-mail');
+         return false;
     }
-
-    if (form1.EMail.value.indexOf("@") <= 0 || form1.EMail.value.indexOf("@") == form1.EMail.value.length - 1 ) {
-        form1.EMail.select();
-        alert ("Введите корректный E-mail");
-        return false;
-        }
-    return true;
 }
+function foo(){
+    alert("Thank you, the form has been submitted.")
+}
+        
+
+
