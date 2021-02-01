@@ -4,12 +4,11 @@ function validate(form_id,email) {
     var address = document.forms[form_id].elements[email].value;
    
     if(reg.test(address) == false) {
-         alert('Введите корректный e-mail');
+         alert('Enter the correct e-mail');
          return false;
     }
-}
-function foo(){
-    alert("Thank you, the form has been submitted.")
+    else
+      alert("Thank you, the form has been submitted.")
 }
         
 
