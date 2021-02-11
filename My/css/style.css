@@ -1,3 +1,42 @@
+input:invalid {
+    border: 1px solid  #ffdddd;
+  }
+ 
+  input:required {
+    border-color: rgb(231, 152, 152);
+    border-width: 1px;
+  }
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 1000;
+}
+.modal .modal_content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    z-index: 99999;
+}
+.modal .modal_content .close_modal_window {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+
 .table {
     display: flex;
     position: absolute;
@@ -19,7 +58,7 @@ input, textarea {
     background-color: #f1f1f1;
 }
 
-p input  {
+p input, button  {
     width:60%;
     padding: 6px 7.5px;    
     background-color: rgb(33, 83, 177);  

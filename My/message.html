@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="css/main.css"> 
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/style.css">
-    <script src="message.js"></script>
+   
+    
 </head> 
     <body>
         <div class="header">
@@ -36,13 +37,13 @@
                             <td scope="col" class="text">Name*</td>
                         </tr>
                         <tr>
-                            <td scope="col"><input type="text" pattern="^[a-zA-Z]+$" name="FIO" required oninvalid="setCustomValidity('Enter your name')" oninput="setCustomValidity('')"></td>
+                            <td scope="col"><input type="text" pattern="^[a-zA-Z]+$" name="FIO" required oninvalid="('Enter your name')" oninput="('')"></td>
                         </tr>
                         <tr>
                             <td class="text">E-mail*</td>
                         </tr>
                         <tr>
-                            <td><input type="text" id="email" name="email" required oninvalid="setCustomValidity('Enter E-mail')" oninput="setCustomValidity('')"></td>
+                            <td><input type="text" id="email" name="email" required oninvalid="('Enter E-mail')" oninput="('')"></td>
                         </tr>
                         <tr>
                             <td class="text">Website</td>
@@ -52,17 +53,22 @@
                         </tr>
                     </table>
                     <p>
-                        <input class="text_button" onclick='validate();' type="submit" value="Send">
+                        <button id="btn_modal_window" class="text_button">Send</button>  
                         <input class="text_button" type="reset" value="Clear">
                     </p>
                 </div>
                 <div>
                     <div class="text">Message:*</div>
-                    <textarea class="message" required oninvalid="setCustomValidity('Enter message')" oninput="setCustomValidity('')"></textarea>
+                    <textarea class="message" required oninvalid="('Enter message')" oninput="('')"></textarea>
                 </div>
             </form>
+            <div id="my_modal" class="modal">
+                <div class="modal_content">
+                    <span class="close_modal_window">×</span>
+                    <p>Thank you, the form has been submitted. </p>
+                </div>
+            </div>
         </div>
-    
         <div class="footer">
             <div class="contacts">
                 <div class="communication">
@@ -78,4 +84,5 @@
         </div>
 
     </body>
+       <script src="message.js"></script>
 </html>
