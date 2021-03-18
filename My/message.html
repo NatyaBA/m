@@ -30,36 +30,36 @@
         </div>
    
         <div class="main">
-            <form class="table" id="form_id" method="post" action="" onsubmit="javascript:return validate('form_id','email');" >
+            <form class="table"  id="form_id"   action="" onsubmit="javascript:return validate('form_id','email');" >
                 <div>
                     <table border="0">
                         <tr>
                             <td scope="col" class="text">Name*</td>
                         </tr>
                         <tr>
-                            <td scope="col"><input type="text" pattern="^[a-zA-Z]+$" name="FIO" required oninvalid="('Enter your name')" oninput="('')"></td>
+                            <td scope="col"><input id="text" type="text" pattern="^[a-zA-Z]+$" name="FIO" required oninvalid="('Enter your name')" oninput="('')"></td>
                         </tr>
                         <tr>
                             <td class="text">E-mail*</td>
                         </tr>
                         <tr>
-                            <td><input type="text" id="email" name="email" required oninvalid="('Enter E-mail')" oninput="('')"></td>
+                            <td><input type="text" value="" id="email" name="email" required oninvalid="('Enter E-mail')" oninput="('')"></td>
                         </tr>
                         <tr>
                             <td class="text">Website</td>
                         </tr>    
                         <tr>
-                            <td><input type="text" pattern="^[a-zA-Z]+$"></td>
+                            <td><input type="text" id="website" pattern="^[a-zA-Z]+$"></td>
                         </tr>
                     </table>
                     <p>
-                        <button id="btn_modal_window" class="text_button">Send</button>  
-                        <input class="text_button" type="reset" value="Clear">
+                        <button id="btn_modal_window" class="text_button" >Send</button>  
+                        <button id="clear" class="text_button">Clear</button>
                     </p>
                 </div>
                 <div>
                     <div class="text">Message:*</div>
-                    <textarea class="message" required oninvalid="('Enter message')" oninput="('')"></textarea>
+                    <textarea class="message" id="textarea" required oninvalid="('Enter message')" oninput="('')"></textarea>
                 </div>
             </form>
             <div id="my_modal" class="modal">
