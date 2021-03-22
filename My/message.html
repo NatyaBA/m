@@ -30,7 +30,7 @@
         </div>
    
         <div class="main">
-            <form class="table"  id="form_id"   action="" onsubmit="javascript:return validate('form_id','email');" >
+            <form class="table"  id="form_id" action="" onsubmit="validate(form_id, email);return false;" >
                 <div>
                     <table border="0">
                         <tr>
@@ -53,7 +53,7 @@
                         </tr>
                     </table>
                     <p>
-                        <button id="btn_modal_window" class="text_button" >Send</button>  
+                        <input id="btn_modal_window" type="submit" class="text_button" value="Send">  
                         <button id="clear" class="text_button">Clear</button>
                     </p>
                 </div>

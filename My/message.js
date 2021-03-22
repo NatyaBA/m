@@ -10,6 +10,7 @@ var btn = document.getElementById("btn_modal_window");
 var span = document.getElementsByClassName("close_modal_window")[0];
 
 
+
  function validate(form_id, email) {
     var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
     var address = document.forms[form_id].elements[email].value;
@@ -21,22 +22,31 @@ var span = document.getElementsByClassName("close_modal_window")[0];
     else {
         btn.onclick = function () {
             modal.style.display = "block";
+    
         }
 
         span.onclick = function () {
             modal.style.display = "none";
+        
         }
 
         window.onclick = function (event) {
             if (event.target == modal) {
                 modal.style.display = "none";
+               
             }
         }   
+       
     }
+    getId('btn_modal_window').addEventListener('click', () => {
+        setTimeout(f.submit(), 10000);
+    }); 
 }
 btn.onclick = validate;
 
 
+   
+    
 
       
   
