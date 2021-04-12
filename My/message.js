@@ -15,6 +15,7 @@ btn.addEventListener('click', () => {
             var pattern = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
             var address = document.forms["formy"].elements["email"].value;
             var pattern1 = /^[a-zA-Z]+$/;
+            var pattern2 = /[a-z]+/;
             var address1 = document.forms["formy"].elements["textName"].value;
             var address2 = document.forms["formy"].elements["textarea"].value;
         
@@ -28,9 +29,9 @@ btn.addEventListener('click', () => {
         
            }
         
-            if (pattern1.test(address2) == false || document.getElementById("textarea").value == "") {
+            if (pattern2.test(address2) == false || document.getElementById("textarea").value == "") {
                 alert('Enter the correct message');
-          
+                return false;
            }
            else
             modal.style.display = "block";
@@ -40,15 +41,7 @@ btn.addEventListener('click', () => {
             modal.style.display = "none";
             document.forms[0].submit();
         }
-        
-        window.onclick = function (event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-               
-            }
-        }   
-  
-    
+
 });
    
 
