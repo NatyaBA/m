@@ -21,20 +21,18 @@ btn.addEventListener('click', () => {
         
             if (pattern1.test(address1) == false || document.getElementById("textName").value == "") {
                  alert('Enter the correct FIO');
-             
             }
-        
-            if (pattern.test(address) == false || document.getElementById("email").value == "") {
-                alert('Enter the correct e-mail');
-        
-           }
-        
-            if (pattern2.test(address2) == false || document.getElementById("textarea").value == "") {
-                alert('Enter the correct message');
-                return false;
-           }
-           else
-            modal.style.display = "block";
+            else
+                if (pattern.test(address) == false || document.getElementById("email").value == "") {
+                    alert('Enter the correct e-mail');
+                }
+                else
+                    if (pattern2.test(address2) == false || document.getElementById("textarea").value == "") {
+                        alert('Enter the correct message');
+                        return false;
+                    }
+                    else
+                        modal.style.display = "block";
         }
 
         span.onclick = function () {
